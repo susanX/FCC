@@ -1,11 +1,17 @@
-/*Basic Algorithm Scripting: Boo who
-If a value is a boolean primitive return true or false.
+*/ 
+*    created by sg 13/06/18
+*    Basic Algorithm Scripting: Boo who
+*/
 
+/*
+If a value is a boolean primitive return true or false.
 ---------------------------------------------------*/
+
 function booWho(bool) {
     console.log(typeof bool);
     return typeof bool === 'boolean';
 }
+
 //--------------------------------------------------
 // booWho(true);// should return true.
 // booWho(false);//  should return true.
