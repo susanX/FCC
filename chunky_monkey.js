@@ -1,0 +1,26 @@
+function chunkArrayInGroups(arr, size) {
+	var arr1 = [];
+	var elements = Math.ceil(arr.length / size); //roundup numbers/box size
+	var remainder = arr.length % size;
+	console.log('remainder: ',remainder,' elements: ',elements,' size: ',size
+	);
+
+	for (var i = 0; i < elements; i++) {
+		//2
+		//removes front elements, saves to element, repeat
+		arr1[i] = arr.splice(0, size);
+	}
+
+	arr = arr1;
+	console.log(arr);
+	return arr;
+}
+//----------------------------------------------
+chunkArrayInGroups(['a', 'b', 'c', 'd'], 2); //[["a", "b"], ["c", "d"]]
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 3); //[[0, 1, 2], [3, 4, 5]]
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 2); //[[0, 1], [2, 3], [4, 5]]
+chunkArrayInGroups([0, 1, 2, 3, 4, 5], 4); //[[0, 1, 2, 3], [4, 5]]
+
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6], 3); //[[0, 1, 2], [3, 4, 5], [6]]
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 4); //[[0, 1, 2, 3], [4, 5, 6, 7], [8]]
+chunkArrayInGroups([0, 1, 2, 3, 4, 5, 6, 7, 8], 2); //[[0, 1], [2, 3], [4, 5], [6, 7], [8]
