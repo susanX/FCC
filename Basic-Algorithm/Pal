@@ -1,0 +1,52 @@
+var reverse;
+function palindrome(str) {//[A-Za-z0-9_]
+  
+  
+       var str2 = str.replace(/[/_]/g,'');
+      //var str3 = str2.replace(/^[1]/g,'');
+  var cleanStr = str2.replace(/[^A-Za-z0-9]/igm,'');
+  console.log("cleanStr: "+cleanStr);
+  
+  
+  //keepnumbers
+  //var cleanArr2 = cleanArr.replace(/[\W^a-z]+/g,'');
+  //var cleanStr = str.match(/[A-Za-z0-9]/g);
+
+  //var cleanStr = str.replace(/[\W_]/g, '');
+  var lcCleanStr = cleanStr.toLowerCase(); //console.log("1. lcCleanStr: "+lcCleanStr);
+  
+  
+  
+  var LcCleanArray = lcCleanStr.split("").join("");//console.log("2. LcCleanArray[]: "+LcCleanArray);//split letters arr, join
+  var reverseLcCleanArray = lcCleanStr.split("").reverse().join(""); //console.log("3. reverse[]: "+reverseLcCleanArray); //s//split letters arr, rev, join
+
+ var norm = lcCleanStr.slice(0,lcCleanStr.length/2); 
+ var revi = reverseLcCleanArray.slice(0,lcCleanStr.length/2);
+  //cut in half
+  console.log("**slice: "+norm);
+  console.log("**revslice: "+revi);
+  
+//   console.log("is norm array?0 "+norm[0]);
+//   console.log("is norm array?1 "+norm[1]);
+//   console.log("is norm array?2 "+norm[2]);
+//   console.log("is norm array?3 "+norm[3]);
+//   console.log("is norm array?4 "+norm[4]);
+  
+//   console.log("is revi array?0 "+revi[0]);
+//   console.log("is revi array?1 "+revi[1]);
+//   console.log("is revi array?2 "+revi[2]);
+//   console.log("is revi array?3 "+revi[3]);
+//   console.log("is revi array?4 "+revi[4]);
+
+  for(var i=0; i<= norm.length;i++){
+    if(norm[i] !== revi[i]){
+      console.log(norm + " is not the same as: " + revi);  
+    return false;
+    }else {
+      console.log(norm[i] + " is the same as: " + revi[i]);    
+    } //if  
+   }//for 
+  return true;
+}//func
+palindrome("almostomla");
+//almostomla matches untill last element
