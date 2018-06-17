@@ -1,0 +1,41 @@
+/*
+*  Basic Algorithm Scripting: Mutations
+*/ code written by S.G.
+*/
+
+// if string1 contains string2 = true
+
+function mutation(arr) {
+	var str1 = arr[0];
+	var str2 = arr[1];
+
+	str1 = str1.toLowerCase();
+	str2 = str2.toLowerCase();
+
+	var arr1 = str1.split('');
+	var arr2 = str2.split('');
+
+	for (var i = 0; i < arr2.length; i++) {
+		// 1. search in: arr1 // look for arr2[i]
+		var p; // p: index or -1 false
+		p = arr1.indexOf(arr2[i]);
+		if (p !== -1) {
+			//2. if element exits remove it from arr1
+			console.log(p, arr1[p] + ' contains:' + arr2[p]);
+			arr1.splice(p, 0);
+		} else if (p == -1) {
+			console.log('this does not match');
+			console.log('There is no ', arr1[i] + ' in arr2');
+			return false;
+		}
+	}
+	return true;
+}
+//mutation(["hello", "Hello"]);//true.
+//mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);//true.
+// mutation(["Mary", "Army"]);//true.
+// mutation(["Mary", "Aarmy"]);//true.
+// mutation(["Alien", "line"]);//true.
+// mutation(["floor", "for"]);//true.
+// mutation(["hello", "neo"]);// false.
+mutation(['voodoo', 'no']); // false.
