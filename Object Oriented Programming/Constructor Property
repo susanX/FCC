@@ -1,0 +1,21 @@
+//Contructor type
+// Write a joinDogFraternity function that takes a candidate parameter and, using the constructor property, return true if the candidate is a Dog, otherwise return false.
+function Dog(name) {
+  this.name = name;
+}
+
+// Add your code below this line
+
+var terrier = new Dog('terrier');
+console.log('terrier.constructor is' + terrier.constructor);
+
+function joinDogFraternity(candidate) {
+ 
+  if (candidate.constructor === Dog) {
+    console.log("**the dog constructor is a: ", terrier.constructor);
+    return true;
+  } else {
+    return false;
+  }
+} 
+joinDogFraternity(terrier);
