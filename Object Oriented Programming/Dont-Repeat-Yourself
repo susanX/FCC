@@ -1,0 +1,31 @@
+//Use Inheritance So You Don't Repeat Yourself
+
+function Animal() { };
+
+Animal.prototype = {
+  constructor: Animal, 
+  describe: function() {
+    console.log("My name is " + this.name)
+  },  
+  eat: function() {
+    console.log("I eat ");
+  }
+};
+function Cat(name, food){
+  this.name =name;
+  this.eat = eat;
+}
+
+function Bear(name, food){
+  this.name =name;
+  this.eat = eat;
+}
+
+Cat.prototype = { 
+  constructor: Cat
+};
+
+
+Bear.prototype = { 
+  constructor: Bear
+};
