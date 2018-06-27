@@ -1,0 +1,22 @@
+//by sg. 27 July '18
+//Object Oriented Programming: Reset an Inherited Constructor Property
+//When an object inherits its prototype from another object, it also inherits the supertype's constructor property.
+
+//Fix the code so duck.constructor and beagle.constructor return their respective constructors.function Animal() { }
+
+function Bird() { }
+function Dog() { }
+
+Bird.prototype = Object.create(Animal.prototype);
+Dog.prototype = Object.create(Animal.prototype);
+
+// Add your code below this line
+
+let duck = new Bird();
+let beagle = new Dog();
+
+duck.prototype = Object.create(Bird.prototype);
+beagle.prototype = Object.create(Dog.prototype);
+
+duck.constructor = Bird;
+beagle.constructor = Dog;
