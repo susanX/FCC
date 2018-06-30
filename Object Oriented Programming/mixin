@@ -1,0 +1,25 @@
+let bird = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+
+// Add your code below this line
+
+// bird.prototype.fly = function() {
+//   return "Alas, this is a flightless bird.";
+// };
+
+let glideMixin = function(obj) {
+  obj.glide = function() {
+    console.log("Flying, wooosh!");
+  }
+};
+
+glideMixin(bird); // prints "Flying, wooosh!"
+glideMixin(boat); // prints "Flying, wooosh!"
