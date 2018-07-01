@@ -1,0 +1,33 @@
+let duck = {
+  name: "Donald",
+  numLegs: 2
+};
+
+let boat = {
+  name: "Warrior",
+  type: "race-boat"
+};
+
+let funModule = (function () {
+  return {
+
+    isCuteMixin: function(obj) {
+      obj.isCute = function() {
+        console.log("Cute: ");
+        return true;
+      };
+    },
+
+      singMixin: function(obj) {
+        obj.isCute = function() {
+          console.log("sing: ");
+          return true;
+        };
+
+    }
+
+  }//return
+})();
+
+funModule.isCuteMixin(duck);
+duck.isCute();
