@@ -1,0 +1,33 @@
+// the global variable
+var bookList = ["book1", "book2", "book3", "book4"];
+/* This function should add a book to the list and return the list */
+// New parameters should come before the bookName one
+// Add your code below this line
+function add (bookList, bookName) {
+  console.log("Add ",bookList.concat(bookName));
+  return bookList.concat(bookName);
+  
+  // Add your code above this line
+}
+
+/* This function should remove a book from the list and return the list */
+// New parameters should come before the bookName one
+// Add your code below this line
+function remove (bookList, bookName) {
+//copy bookList
+  let newArr = [].concat(bookList);//
+  //let newArr = [...bookList];
+
+  //get bookName index, if not empty -1
+    if (newArr.indexOf(bookName) >= 0) {
+    //splice out bookName
+    newArr.splice(newArr.indexOf(bookName), 1);
+    }
+  return newArr;
+}
+
+var newBookList = add(bookList, 'book5');
+var newerBookList = remove(bookList, 'book6');
+var newestBookList = remove(add(bookList, 'book5'), 'book6');
+
+console.log(bookList);
