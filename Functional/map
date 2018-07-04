@@ -31,6 +31,7 @@ var rating = [];
 
 rating = watchList.map(function(movie){
   return { title:  movie.Title,
-           rating: movie.imdbRating},("\n")
+           rating: movie.imdbRating
+         }
 });
  
