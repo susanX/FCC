@@ -1,0 +1,25 @@
+// the global Array
+var s = [23, 65, 98, 5];
+
+Array.prototype.myMap = function(callback){
+  var newArray = [];
+  
+
+// I call myMap
+// myMap calls back to me
+  // push the element at i index in this 
+  // this i represents the array in this case 
+
+  for(var i = 0;i < this.length;i++){
+  	newArray.push(callback(this[i]));
+      console.log(i,":",newArray);
+  }
+  //ref: with help from JM-Mendez
+  //https://forum.freecodecamp.org/t/implement-map-on-a-prototype-so-confused/202862/19
+
+return newArray;
+}
+
+var new_s = s.myMap(function(item){
+  return item * 2;
+});
