@@ -1,0 +1,14 @@
+function nonMutatingSplice(cities) {
+  // Add your code below this line
+   var newArr = [];
+   newArr = cities.slice(0, 3);
+   console.log(newArr);
+   console.log("newArr.length: ",newArr.length);
+
+   return newArr;
+  // Add your code above this line
+}
+var inputCities = ["Chicago", "Delhi", "Islamabad", "London", "Berlin"];
+
+nonMutatingSplice(inputCities);
+//return ["Chicago", "Delhi", "Islamabad"].
