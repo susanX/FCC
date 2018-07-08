@@ -1,0 +1,12 @@
+var my_array = ["Winter", "", "Is", "Coming"];
+var newArr = [];
+function urlSlug(title) {
+  my_array = title.toLowerCase().split(" ");
+  var my_array = my_array.filter(function(x){
+    return (x !== (""));
+  });
+    return my_array.join('-');
+}
+console.log(newArr);
+
+urlSlug("     Winter Is    Coming    ");
