@@ -1,0 +1,14 @@
+function splitify(str) {
+  // Add your code below this line
+  var newArr = [];
+  str = str.replace(/[-|.| ]/g,',');
+  //finds - . ' '
+  newArr = str.split(',');
+  return newArr;
+}
+splitify("This.is.a-sentence");
+splitify("Hello World,I-am code");
+splitify("Earth-is-our home");
+// should return ["Hello", "World", "I", "am", "code"].
+// should return ["Earth", "is", "our", "home"].
+// should return ["This", "is", "a", "sentence"].
