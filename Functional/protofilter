@@ -1,0 +1,22 @@
+// the global Array
+var s = [23, 65, 98, 5, 2,4,8];
+
+var newArray=[];
+
+Array.prototype.myFilter = function(callback){
+  for(var i = 0; i < this.length; i++){
+    // console.log(this[i]);
+    if(callback(this[i])){
+      // console.log(callback);
+      newArray.push(this[i]);     
+      //console.log("even: ",this[i])
+    }   
+  }
+  return newArray;
+}
+
+var new_s = s.myFilter(function(item){
+  return item % 2 === 1;
+});
+
+console.log(new_s);
