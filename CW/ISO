@@ -1,0 +1,32 @@
+var newArr = [];
+var newArr2 = [];
+
+function isIsogram(str){
+  //IF AN EMPTY STRING IS AN ISOGRAM
+  if(str === ""){
+  console.log("1. TRUE \""+str+"\" IS an isogram");
+  return true;
+  }
+
+  //IF IT CONTAINS NON ALPHA CHARS NOT AN ISOGRAM
+  if (/[^a-zA-Z]/.test(str)){
+  console.log("2. FALSE",str, "is NOT an isogram");
+  return false;
+  }
+
+  // COMPARE SORTED STRING i with i +1
+  var strLower = str.toLowerCase();
+  newArr = strLower.split('');
+  newArr2 = newArr.sort();
+  console.log("SORT ",newArr2);
+  for(var i = 0; i < str.length; i++){
+    if(newArr2[i] == newArr2[i+1]) { 
+      console.log("3. (loop",i+": "+newArr2[i],newArr2[i+1]+") FAILS");
+      return false;  
+    }else{ 
+      console.log("4. (loop",i+": "+newArr2[i],newArr2[i+1]+") PASSES");
+   }  
+  }
+  return true
+}
+isIsogram("agiimors");
