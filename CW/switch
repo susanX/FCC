@@ -1,0 +1,23 @@
+function getGrade (s1, s2, s3) {
+  var total = s1 + s2 + s3;
+  var avg = total/arguments.length;
+  switch (true) {
+      case avg <= 100 && avg >= 90:
+          return 'A';
+          break;
+      case avg < 90 && avg >= 80:
+          return 'B';
+          break;
+      case avg < 80 && avg >= 70:
+          return 'C';
+          break;
+      case avg < 70 && avg >= 60:
+          return 'D';
+          break;
+      case avg < 60 && avg >= 0:
+          return 'F';
+          break;      
+      default:
+          return 'NONE';
+  } 
+}
