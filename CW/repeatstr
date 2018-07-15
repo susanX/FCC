@@ -1,0 +1,8 @@
+function repeatStr (s,str) {
+  var newStr = str.split("");
+  for(var i = 1; i< s; i++){
+    newStr.push(str);
+  }
+  return newStr.join("");
+}
+repeatStr(5, "Hello")
