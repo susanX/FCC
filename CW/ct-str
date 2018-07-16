@@ -1,0 +1,22 @@
+function solve(s){
+  var upper = 0, lower = 0; 
+
+    for(var i = 0; i < s.length; i++){
+      //CAPS
+      if(s.charCodeAt(i) >= 65 && s.charCodeAt(i) <= 90){
+        upper++; 
+      //LOWER
+      } else if (s.charCodeAt(i) >= 97 && s.charCodeAt(i) <= 122){
+        lower++; 
+      } else {
+        console.log("not and alph character")
+      }    
+  }
+  console.log("lowercase wins: "+lower);
+  console.log("uppercase Wins: "+upper);
+  if(lower >= upper){ 
+    return s.toLowerCase();
+    } if(lower < upper){ 
+    return s.toUpperCase();
+    }
+}
