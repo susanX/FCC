@@ -1,0 +1,8 @@
+function Abbreviatize(word) {
+  var abb = "";
+  if(word.length > 3){
+    return abb.concat(word[0]).concat(word.length - 2).concat(word.charAt(word.length - 1));
+  }
+  return word;
+}
+Abbreviatize("Globalization");
