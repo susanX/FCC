@@ -1,0 +1,4 @@
+function removeO(string){
+  return string.split('o').join("");
+}
+removeO("hello world");
