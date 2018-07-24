@@ -1,0 +1,32 @@
+// Author sg. 23/7/18
+function high(str){
+var arr = str.split(" ");
+var letterScore = "";
+var ascii = str.charCodeAt(str[0]);
+var sum = 0;
+var wordCount = 0;
+var currentword = 0
+var highestScoreWord = "";
+
+  //words
+  for(i = 0; i < arr.length; i++){
+    var sum = 0;
+      for(j = 0; j < arr[i].length; j++){  
+      letterScore = arr[i].charCodeAt(j) - 96;
+      console.log(arr[i][j]+": ",letterScore);
+      sum += letterScore;
+      }
+        //letters
+        if(sum > currentword){ 
+          highestScoreWord = arr[i];
+          currentword=sum;
+        } else {
+          highestScoreWord=highestScoreWord;
+        }
+      console.log(arr[i]+" = "+ sum+"\n");
+      }
+    console.log("Highest score word: "+highestScoreWord);
+    return highestScoreWord;  
+ }
+     
+high("man i need a taxi up to ubud");
