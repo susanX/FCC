@@ -1,0 +1,29 @@
+function validParentheses(parens){
+  var arr = [];
+  arr = parens.split("");
+
+  var counter = 0;
+
+  for(var i =0; i < parens.length; i++){
+    if(arr[i] == "("){
+      counter++;
+      console.log("(", counter);
+    } else if (arr[i] == ")" ){
+      counter = counter - 1;
+      console.log(" )", counter);
+    }
+    if (counter < 0) {
+      return false;
+    }
+  }
+    if (counter == 0) {
+      return true;
+    } else {
+      return false ;
+    } 
+}
+validParentheses( "(())((()((()))))" );
+// "()"              =>  true
+// ")(()))"          =>  false
+// "("               =>  false
+// "(())((()())())"  =>  true
