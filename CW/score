@@ -1,0 +1,51 @@
+function createOb(str1,str2){
+  console.log("str1",str1); 
+  console.log("str2",str2);
+var counts1 = {}; 
+var counts2 = {};
+var str1clean1 = ""; 
+var str2clean2 = "", letter = "";
+  
+  for(var i = 0; i < str1.length; i++){//clean string
+    if(/[a-z]/.test(str1[i])){
+      str1clean1 += str1[i];
+      }  
+  }
+  for(var i = 0; i < str2.length; i++){//clean string
+    if(/[a-z]/.test(str2[i])){
+      str2clean2 += str2[i];
+      }  
+  }
+
+ console.log("str1clean1",str1clean1); 
+ console.log("str2clean2",str2clean2);
+////Fill counts
+  for(var i = 0; i < str1clean1.length; i++){ //TODO letter occurances
+    letter = str1clean1[i];//property
+    if(counts1[letter] === undefined){
+      counts1[letter] = 1;//value
+    } else {
+      counts1[letter]++; //vallue
+    }
+  }//for 
+
+  for(var i = 0; i < str2clean2.length; i++){ //TODO letter occurances
+    letter = str2clean2[i];//property
+    if(counts2[letter] === undefined){
+      counts2[letter] = 1;//value
+    } else {
+      counts2[letter]++; //vallue
+    }
+  }//for
+  //TODO////Fill counts object
+  //TODO COMPARE OBJECTS 
+  //TODO CONSTRUCT OUTPUT
+
+    console.log("counts1: ",counts1);
+   console.log(str1clean1);
+   console.log("counts2: ",counts2);
+   console.log(str2clean2);
+  //var arr1 = str1.split(makeword);
+  //console.log("tokens: ",tokens);
+}//func
+createOb("aaaaaaath8*0ais i$%^&s st?><:ring1one","Hhello");
